@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>광주정보문화산업진흥원 — 상세검색</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <nav class="nav scrolled">
+    <div class="nav__logo">
+      <span class="brand">광주정보문화산업진흥원</span>
+      <span class="service">미디어 플랫폼</span>
+    </div>
+    <div class="nav__links">
+      <a href="/">홈</a>
+      <a href="/search.html">상세검색</a>
+    </div>
+    <div class="nav__spacer"></div>
+    <div class="nav__profile" title="프로필"></div>
+  </nav>
+
+  <main class="search-page">
+    <h1 class="search-page__title">상세검색</h1>
+
+    <form class="search-form" id="form">
+      <div class="field">
+        <label class="field__label">유형</label>
+        <div class="field__control">
+          <div class="checks" id="types"></div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="title">영화명</label>
+        <div class="field__control">
+          <input type="text" id="title" name="title" placeholder="직접입력" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label">배우·스탭</label>
+        <div class="field__control">
+          <select id="role" name="role">
+            <option value="all">감독·배우·스탭</option>
+            <option value="director">감독</option>
+            <option value="cast">배우·스탭</option>
+          </select>
+          <input type="text" id="person" name="person" placeholder="직접입력" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="company">제작·투자·배급사</label>
+        <div class="field__control">
+          <input type="text" id="company" name="company" placeholder="직접입력" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="keyword">줄거리/키워드</label>
+        <div class="field__control">
+          <input type="text" id="keyword" name="keyword" placeholder="직접입력" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="genre">장르</label>
+        <div class="field__control">
+          <select id="genre" name="genre">
+            <option value="">장르선택</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label">제작년도</label>
+        <div class="field__control year-range">
+          <input type="number" id="yearFrom" name="yearFrom" placeholder="범위 직접입력" /> 년
+          <span>~</span>
+          <input type="number" id="yearTo" name="yearTo" placeholder="범위 직접입력" /> 년
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="country">제작국가</label>
+        <div class="field__control">
+          <select id="country" name="country">
+            <option value="">제작국가 선택</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="search-actions">
+        <button type="submit" class="btn btn--search">검색</button>
+        <button type="button" class="btn btn--reset" id="reset">초기화</button>
+      </div>
+    </form>
+
+    <section class="results">
+      <div class="results__head" id="resultsHead">조건을 입력하고 검색해 보세요.</div>
+      <div class="results__grid" id="resultsGrid"></div>
+    </section>
+  </main>
+
+  <script src="/search.js"></script>
+</body>
+</html>

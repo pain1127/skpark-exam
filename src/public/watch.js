@@ -9,9 +9,19 @@ function getId() {
 }
 
 function render(movie) {
-  document.title = `MovieFlix — ${movie.title}`;
-  player.src = movie.video;
-  player.poster = movie.backdrop;
+  document.title = `광주정보문화산업진흥원 — ${movie.title}`;
+  // Kollus iframe 임베드로 재생
+  player.innerHTML = `
+    <iframe
+      class="player-frame"
+      src="${movie.embed}"
+      frameborder="0"
+      allow="local-network-access; autoplay; fullscreen"
+      allowfullscreen
+      webkitallowfullscreen
+      mozallowfullscreen
+    ></iframe>
+  `;
   info.innerHTML = `
     <h1 class="watch__title">${movie.title}</h1>
     <div class="watch__meta">
