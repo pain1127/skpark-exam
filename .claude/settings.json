@@ -5,7 +5,10 @@
       "Bash(git add *)",
       "Bash(git commit -q -m ' *)",
       "WebFetch(domain:www.gicon.or.kr)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Read(//tmp/**)",
+      "Read(//private/tmp/**)",
+      "Bash(git commit -q -m 'Add GICON logo image and refine search/home UI styling *)"
     ]
   }
 }
