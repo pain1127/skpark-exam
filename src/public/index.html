@@ -3,11 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Express 웹 개발환경</title>
+  <title>MovieFlix — 데모</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <h1>Express 웹 개발환경</h1>
-  <p>Express 서버가 성공적으로 실행되었습니다.</p>
-  <p>API 호출: <a href="/api/hello">/api/hello</a></p>
+  <nav class="nav" id="nav">
+    <div class="nav__logo">MOVIEFLIX</div>
+    <div class="nav__links">
+      <a href="/">홈</a>
+      <a href="/">시리즈</a>
+      <a href="/">영화</a>
+      <a href="/">내가 찜한 콘텐츠</a>
+    </div>
+    <div class="nav__spacer"></div>
+    <div class="nav__profile" title="프로필"></div>
+  </nav>
+
+  <header class="hero" id="hero"></header>
+
+  <main class="rows" id="rows">
+    <p class="loading">콘텐츠를 불러오는 중…</p>
+  </main>
+
+  <script src="/app.js"></script>
 </body>
 </html>
